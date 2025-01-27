@@ -1,2 +1,2 @@
 # CQUPT_Cognitive_Science_Foundation
-homework
+已实现利用CSP提取运动想象信号的分类特征并使用LDA和SVM对10个被试进行了不跨被试的交叉验证和跨被试的留一验证
