@@ -1,4 +1,4 @@
-import CQUPT_Cognitive_Science_Foundation.preprocess as pp
+import preprocess as pp
 def preprocess(
         data,
         channel_index = ['FC5', 'FC3', 'FC1', 'FC2', 'FC4','FC6','C5','C3','C1','Cz','C2','C4','C6','CP5','CP3','CP1','CPz','CP2','CP4','CP6'],
@@ -50,7 +50,7 @@ def eval_cross_validation(SMT, n_splits:int, csp_n_components:int, clf):
     Returns:
         float: 平均准确率。
     """
-    import CQUPT_Cognitive_Science_Foundation.util as util
+    import util as util
     kf = KFold(n_splits=n_splits, shuffle=True, random_state=42)
     scores = []
     X=SMT['x']
@@ -90,7 +90,7 @@ def eval_cross_subject(all_SMT, csp_n_components:int, clf):
     Returns:
         float: 平均准确率。
     """
-    import CQUPT_Cognitive_Science_Foundation.util as util
+    import util as util
     scores = []
     for subject in range(10):
         train_SMT=conbine_SMT([all_SMT[i] for i in range(10) if i!=subject])
